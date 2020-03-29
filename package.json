@@ -1,13 +1,16 @@
 {
-  "name": "@zikwall/re-player-music",
+  "name": "re-player-music",
   "version": "1.0.0",
   "description": "Music player for React Native Apps based",
-  "author": "Andrey Kapitonov",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/zikwall/re-player-music/issues"
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/zikwall/re-player-music#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zikwall/re-player-music.git"
+  },
+  "author": "Andrey Kapitonov",
   "keywords": [
     "react-native",
     "react-native-musci",
@@ -16,21 +19,9 @@
     "ios",
     "android"
   ],
-  "main": "index.js",
-  "directories": {
-    "example": "examples"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zikwall/re-player-music/issues"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zikwall/re-player-music.git"
-  },
-  "peerDependencies": {
-    "prop-types": "*",
-    "react": "*",
-    "react-native": "*",
-    "react-native-vector-icons": ">= 2.1.0",
-  }
+  "homepage": "https://github.com/zikwall/re-player-music#readme"
 }
