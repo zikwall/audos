@@ -49,16 +49,16 @@ const Player = ({ onOpenModal, current }) => {
 
             <View style={{ alignItems: 'center' }}>
                 <View style={{ alignItems: 'center', paddingBottom: 65, paddingTop: 65 }}>
-                    <Text style={[ iOSUIKit.title3Emphasized, { color: '#fff' } ]}>
+                    <Text style={[ iOSUIKit.title3Emphasized, { color: '#fff', textAlign: 'center' } ]}>
                         { current.title }
                     </Text>
-                    <Text style={[ iOSUIKit.caption1, { color: '#46b3e6', paddingTop: 10 } ]}>
+                    <Text style={[ iOSUIKit.caption1, { color: '#46b3e6', paddingTop: 10, textAlign: 'center' } ]}>
                         { current.author }
                     </Text>
                 </View>
 
                 <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-                    <TouchableOpacity onPress={() => {}} style={{ paddingRight: 50, paddingLeft: 10 }}>
+                    <TouchableOpacity onPress={() => {}} style={{ paddingRight: 40, paddingLeft: 10 }}>
                         <Icon name={'download'} size={15} color={'#fff'} />
                     </TouchableOpacity>
 
@@ -66,7 +66,7 @@ const Player = ({ onOpenModal, current }) => {
                         <TouchableOpacity onPress={() => {}} style={{ paddingHorizontal: 10 }}>
                             <Icon name={'backward'} size={15} color={'#fff'} />
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => {}} style={{ paddingLeft: 40, paddingRight: 30 }}>
+                        <TouchableOpacity onPress={() => {}} style={{ paddingLeft: 40, paddingRight: 40 }}>
                             <Icon name={'play'} size={30} color={'#fff'} />
                         </TouchableOpacity>
                         <TouchableOpacity onPress={() => {}} style={{ paddingHorizontal: 10 }}>
@@ -74,7 +74,10 @@ const Player = ({ onOpenModal, current }) => {
                         </TouchableOpacity>
                     </View>
 
-                    <TouchableOpacity onPress={() => onOpenModal(current.id, current.title, current.author, current.image)} style={{ paddingLeft: 50, paddingRight: 10 }}>
+                    <TouchableOpacity
+                        onPress={() => onOpenModal(current.id, current.title, current.author, current.image)}
+                        style={{ paddingLeft: 50, paddingRight: 10 }}
+                    >
                         <Icon name={'more-v-a'} size={15} color={'#fff'} />
                     </TouchableOpacity>
                 </View>
