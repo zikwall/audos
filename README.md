@@ -7,11 +7,11 @@
 
 Player | Playlist | ActonSheet | Empty | UI
 --- | --- | --- | --- | ---
-![Player](screenshots/Screenshot_20200330-122612_musicapp.jpg "Player responsive layout") | ![Playlist](screenshots/Screenshot_20200330-122556_musicapp.jpg "Player responsive layout") | ![Sheet](screenshots/Screenshot_20200330-122759_musicapp.jpg "Player responsive layout") |  ![Empty](screenshots/Screenshot_20200330-122547_musicapp.jpg "Player responsive layout") |  ![UI](screenshots/Screenshot_20200330-192122_musicapp.jpg "Player responsive layout")
+![Player](screenshots/Screenshot_20200330-194338_musicapp.jpg "Player responsive layout") | ![Playlist](screenshots/Screenshot_20200330-122556_musicapp.jpg "Player responsive layout") | ![Sheet](screenshots/Screenshot_20200330-122759_musicapp.jpg "Player responsive layout") |  ![Empty](screenshots/Screenshot_20200330-122547_musicapp.jpg "Player responsive layout") |  ![UI](screenshots/Screenshot_20200330-192122_musicapp.jpg "Player responsive layout")
 
 -- | -- | -- | --
 --- | --- | --- | ---
-![Player](gifs/20200330_193102_1.gif "Player responsive layout") | ![Playlist](gifs/20200330_123628_1.gif "Player responsive layout") | ![Playlist](gifs/20200330_193225_1.gif "Player responsive layout") |  coming soon
+![Player](gifs/20200330_193102_1.gif "Player responsive layout") | ![Playlist](gifs/20200330_123628_1.gif "Player responsive layout") | ![Playlist](gifs/20200330_193225_1.gif "Player responsive layout") |  ![UI](gifs/20200330_194015_1.gif "Player responsive layout") 
 
 
 
