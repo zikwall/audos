@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, ScrollView } from 'react-native';
+import {View, Text, ScrollView, StatusBar} from 'react-native';
 import UIAlbumItem from './UIAlbumItem';
 import UIActionableHorizontalScroll from './UIActionableHorizontalScroll';
 import UIBanner from './UIBanner';
@@ -8,6 +8,7 @@ import UIMultilineHorizontalScroll from './UIMultilineHorizontalScroll';
 import { width, ColorScheme } from '../Const';
 
 const UIPlaylisScene = ({ colorScheme, items }) => {
+    StatusBar.setBackgroundColor(ColorScheme[colorScheme].backgroundColor);
 
     return (
         <View style={{
@@ -43,8 +44,8 @@ const UIPlaylisScene = ({ colorScheme, items }) => {
             </UIActionableHorizontalScroll>
 
             <UIMultilineHorizontalScroll
-                label={'Новые альбомы'}
-                actionLabel={'Показать все'}
+                label={'Новое'}
+                actionLabel={'Слушать все'}
                 onActionLabelTouch={() => alert('Показал!?')}
                 items={items}
                 countInGroup={3}
