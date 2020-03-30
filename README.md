@@ -21,6 +21,8 @@ todo
 
 ### Example usage
 
+Full example see `exampels` folder
+
 ```js
 
 import RePlayerMusic from 're-player-music';
