@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import {
     View,
     StatusBar,
@@ -19,8 +20,9 @@ import ActionModal from '../components/ActionModal';
 import ModalizeWrapper from '../components/ModalizeWrapper';
 import Swiper from '../components/Swiper';
 import CurrentPlaylist from '../components/CurrentPlaylist';
+import UIMiniplayer from '../components/ui/UIMiniplayer';
 
-const RePlayerMusic = ({ colorScheme, actionItems, actionItemIcons, items }) => {
+const RePlayerMusic = ({ colorScheme, actionItems, actionItemIcons, items, minimize }) => {
     StatusBar.setBackgroundColor(ColorScheme[colorScheme].backgroundColor);
 
     const [ currentSong, setCurrentSong ] = useState(null);
@@ -80,6 +82,10 @@ const RePlayerMusic = ({ colorScheme, actionItems, actionItemIcons, items }) => 
             </View>
         )
     };
+
+    if (minimize === true) {
+        return <UIMiniplayer />
+    }
 
     return (
         <>
@@ -148,6 +154,14 @@ const RePlayerMusic = ({ colorScheme, actionItems, actionItemIcons, items }) => 
             </ModalizeWrapper>
         </>
     )
+};
+
+RePlayerMusic.defaultProps = {
+    minimize: false,
+};
+
+RePlayerMusic.propTypes = {
+    minimize: PropTypes.bool,
 };
 
 export default RePlayerMusic;
