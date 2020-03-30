@@ -20,11 +20,12 @@ import ModalizeWrapper from '../components/ModalizeWrapper';
 import Swiper from '../components/Swiper';
 import CurrentPlaylist from '../components/CurrentPlaylist';
 
-const RePlayerMusic = ({ colorScheme, actionItems, items }) => {
+const RePlayerMusic = ({ colorScheme, actionItems, actionItemIcons, items }) => {
     StatusBar.setBackgroundColor(ColorScheme[colorScheme].backgroundColor);
 
     const [ currentSong, setCurrentSong ] = useState(null);
     const [ currentPage, setCurrentPage ] = useState(0);
+    const [ currentSnapedSong, setCurrentSnapedSong ] = useState(currentSong);
 
     const swiperRef = React.createRef();
     const bottomSheet = React.createRef();
@@ -32,12 +33,12 @@ const RePlayerMusic = ({ colorScheme, actionItems, items }) => {
     const swipeToPlayer = () => {
         if (swiperRef.current) {
             swiperRef.current.scrollBy(1);
-
-            console.log('sss')
         }
     };
 
-    const snapBottomSheet = () => {
+    const snapBottomSheet = (id, title, author, image) => {
+        setCurrentSnapedSong({ id: id, title: title, author: author, image: image });
+
         if (bottomSheet.current) {
             bottomSheet.current.open();
         }
@@ -59,8 +60,6 @@ const RePlayerMusic = ({ colorScheme, actionItems, items }) => {
 
     const onMomentumScrollEnd = (e, state, context) => {
         setCurrentPage(state.index);
-
-        console.log(state.index);
     };
 
     const renderPlayer = () => {
@@ -143,7 +142,8 @@ const RePlayerMusic = ({ colorScheme, actionItems, items }) => {
                 <ActionModal
                     onCloseModal={() => closeBottomSheet()}
                     items={actionItems}
-                    current={currentSong}
+                    itemsIcons={actionItemIcons}
+                    current={currentSnapedSong}
                 />
             </ModalizeWrapper>
         </>

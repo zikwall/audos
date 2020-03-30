@@ -19,7 +19,7 @@ ActionItem.defaultProps = {
     onPress: () => {}
 };
 
-const ActionModal = ({ onCloseModal, items, current }) => {
+const ActionModal = ({ onCloseModal, items, itemsIcons, current }) => {
     return (
         <View style={{ flex: 1, paddingTop: 10, }}>
             <View style={{
@@ -32,17 +32,21 @@ const ActionModal = ({ onCloseModal, items, current }) => {
                     author={current.author}
                     image={current.image}
                 />
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingTop: 15, paddingBottom: 15 }}>
-                    <TouchableOpacity onPress={() => {}} style={{ paddingHorizontal: 20 }}>
-                        <Icon name={'download'} size={20} color={'#ccc'} />
-                    </TouchableOpacity>
-                    <TouchableOpacity onPress={() => {}} style={{ paddingHorizontal: 20 }}>
-                        <Icon name={'podcast'} size={20} color={'#ccc'} />
-                    </TouchableOpacity>
-                    <TouchableOpacity onPress={() => {}} style={{ paddingHorizontal: 20 }}>
-                        <Icon name={'share-a'} size={20} color={'#ccc'} />
-                    </TouchableOpacity>
-                </View>
+
+                {
+                    !!itemsIcons &&
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingTop: 15, paddingBottom: 15 }}>
+                        <TouchableOpacity onPress={() => {}} style={{ paddingHorizontal: 20 }}>
+                            <Icon name={'download'} size={20} color={'#ccc'} />
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => {}} style={{ paddingHorizontal: 20 }}>
+                            <Icon name={'podcast'} size={20} color={'#ccc'} />
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => {}} style={{ paddingHorizontal: 20 }}>
+                            <Icon name={'share-a'} size={20} color={'#ccc'} />
+                        </TouchableOpacity>
+                    </View>
+                }
             </View>
 
             <View style={{ backgroundColor: '#3c4245', paddingVertical: 10, paddingHorizontal: 20 }}>

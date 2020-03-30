@@ -34,7 +34,7 @@ const UISongItem = ({ theme, id, image, timeVisible, title, author, onTouchMore,
                     </Text>
                 }
 
-                <TouchableOpacity onPress={() => onTouchMore()} style={{ paddingLeft: 10, paddingRight: 5 }}>
+                <TouchableOpacity onPress={() => onTouchMore(id, title, author, image)} style={{ paddingLeft: 10, paddingRight: 5 }}>
                     <Icon name={'more-v-a'} size={15} color={'#ccc'} />
                 </TouchableOpacity>
             </View>
@@ -42,9 +42,9 @@ const UISongItem = ({ theme, id, image, timeVisible, title, author, onTouchMore,
     )
 };
 
-PlaylistItem.defaultProps = {
+UISongItem.defaultProps = {
     timeVisible: true,
     onTouchMore: () => {}
 }
 
-export default PlaylistItem;
+export default UISongItem;

@@ -74,7 +74,7 @@ const Player = ({ onOpenModal, current }) => {
                         </TouchableOpacity>
                     </View>
 
-                    <TouchableOpacity onPress={() => onOpenModal()} style={{ paddingLeft: 50, paddingRight: 10 }}>
+                    <TouchableOpacity onPress={() => onOpenModal(current.id, current.title, current.author, current.image)} style={{ paddingLeft: 50, paddingRight: 10 }}>
                         <Icon name={'more-v-a'} size={15} color={'#fff'} />
                     </TouchableOpacity>
                 </View>

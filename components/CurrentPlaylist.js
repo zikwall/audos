@@ -6,8 +6,8 @@ import UISongItem from '../components/ui/UISongItem';
 
 const CurrentPlaylist = ({ theme, onOpenModal, onSelectItem, items }) => {
 
-    const onTouchItemMore = () => {
-        onOpenModal();
+    const onTouchItemMore = (id, title, author, image) => {
+        onOpenModal(id, title, author, image);
     };
 
     const onTouchItem = (id, title, author, image) => {

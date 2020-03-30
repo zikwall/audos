@@ -11,7 +11,7 @@ const PlaylistItemMore = ({ theme, image, title, author, onTouchAngle }) => {
     return (
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingVertical: 7 }}>
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <Image width={45} height={45} round={5} source={image} />
+                <UIImage width={45} height={45} round={5} source={image} />
 
                 <View style={{ paddingHorizontal: 15, width: width * 0.55}}>
                     <Text numberOfLines={1} style={[ iOSUIKit.callout, { color: '#fff', flexWrap: 'wrap' } ]}>
