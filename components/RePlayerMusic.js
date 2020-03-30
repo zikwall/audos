@@ -3,16 +3,11 @@ import PropTypes from 'prop-types';
 import {
     View,
     StatusBar,
-    Text,
     TouchableOpacity,
-    Dimensions
 } from 'react-native';
-import StickyParallaxHeader from 'react-native-sticky-parallax-header';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 import IconFontisto from 'react-native-vector-icons/Fontisto';
-import { Modalize } from 'react-native-modalize';
-import ViewPager from '@react-native-community/viewpager';
 
 import { width, ColorScheme } from './Const';
 import Player from './Player';

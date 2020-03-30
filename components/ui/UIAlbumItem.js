@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import UIImage from './UIImage';
-import {iOSUIKit} from 'react-native-typography';
+import { iOSUIKit } from 'react-native-typography';
 
 const UIAlbumItem = ({ id, title, author, image, year, onSelectSong }) => {
 

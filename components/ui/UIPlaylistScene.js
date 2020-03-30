@@ -1,11 +1,11 @@
 import React from 'react';
-import {View, Text, ScrollView, StatusBar} from 'react-native';
+import { View, StatusBar} from 'react-native';
 import UIAlbumItem from './UIAlbumItem';
 import UIActionableHorizontalScroll from './UIActionableHorizontalScroll';
 import UIBanner from './UIBanner';
 import UIMultilineHorizontalScroll from './UIMultilineHorizontalScroll';
 
-import { width, ColorScheme } from '../Const';
+import { ColorScheme } from '../Const';
 
 const UIPlaylisScene = ({ colorScheme, items }) => {
     StatusBar.setBackgroundColor(ColorScheme[colorScheme].backgroundColor);

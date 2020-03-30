@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Fontisto';
-import {iOSUIKit} from 'react-native-typography';
+import { iOSUIKit } from 'react-native-typography';
 
 const UIBanner = ({ title, subtitle, buttonIcon, buttonTitle, onTouchButton }) => {
     return (

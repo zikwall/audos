@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import {
     View,
     Text,
@@ -8,12 +8,7 @@ import {
 import Slider from '@react-native-community/slider';
 import { iOSUIKit } from 'react-native-typography';
 import Icon from 'react-native-vector-icons/Fontisto';
-
-import ModalizeWrapper from '../components/ModalizeWrapper';
-import ActionModal from '../components/ActionModal';
 import UIImage from '../components/ui/UIImage';
-
-import ViewPager from '@react-native-community/viewpager';
 
 const { width } = Dimensions.get('window');
 

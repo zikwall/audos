@@ -1,12 +1,12 @@
 import React from 'react';
-import { View, Image } from 'react-native';
+import { Image } from 'react-native';
 import UIEmptyImage from './UIEmptyImage';
 
 const ImageWrap = ({ source, width, height, mode, round, isAlbum }) => {
     if (!source) {
         return <UIEmptyImage width={width} height={height} round={round} isAlbum={isAlbum} />
     }
-    
+
     return (
         <Image
             style={{ width: width, height: width, borderRadius: round }}
