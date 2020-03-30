@@ -1,13 +1,57 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import PlaylistItemMore from 're-player-music/components/PlaylistItemMore';
+import Icon from 'react-native-vector-icons/Fontisto';
+import {iOSUIKit} from 'react-native-typography';
 
-const ActionModal = ({ onCloseModal }) => {
+const ActionItem = ({ onPress, title, icon }) => (
+    <TouchableOpacity onPress={onPress} style={{ flexDirection: 'row', paddingVertical: 15 }}>
+        <View style={{ width: 20, alignItems: 'center' }}>
+            <Icon name={icon} size={20} color={'#46b3e6'}/>
+        </View>
+        <Text style={[ iOSUIKit.callout, { color: '#fff', paddingLeft: 20 } ]}>
+            { title }
+        </Text>
+    </TouchableOpacity>
+);
+
+ActionItem.defaultProps = {
+    onPress: () => {}
+};
+
+const ActionModal = ({ onCloseModal, items, current }) => {
     return (
-        <View style={styles.content}>
-            <Text style={styles.content__subheading}>{'Проверка'.toUpperCase()}</Text>
-            <TouchableOpacity style={styles.content__button} activeOpacity={0.9} onPress={onCloseModal}>
-                <Text style={styles.content__buttonText}>Открыть доступ!</Text>
-            </TouchableOpacity>
+        <View style={{ flex: 1, paddingTop: 10, }}>
+            <View style={{
+                backgroundColor: '#222831',
+                paddingHorizontal: 10,
+                paddingBottom: 10
+            }}>
+                <PlaylistItemMore
+                    title={current.title}
+                    author={current.author}
+                    image={current.image}
+                />
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingTop: 15, paddingBottom: 15 }}>
+                    <TouchableOpacity onPress={() => {}} style={{ paddingHorizontal: 20 }}>
+                        <Icon name={'download'} size={20} color={'#ccc'} />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => {}} style={{ paddingHorizontal: 20 }}>
+                        <Icon name={'podcast'} size={20} color={'#ccc'} />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => {}} style={{ paddingHorizontal: 20 }}>
+                        <Icon name={'share-a'} size={20} color={'#ccc'} />
+                    </TouchableOpacity>
+                </View>
+            </View>
+
+            <View style={{ backgroundColor: '#3c4245', paddingVertical: 10, paddingHorizontal: 20 }}>
+                {
+                    items.map((item, key) => (
+                        <ActionItem key={key} title={item.title} icon={item.icon} onPress={item.onPress}/>
+                    ))
+                }
+            </View>
         </View>
     )
 };
@@ -15,20 +59,6 @@ const ActionModal = ({ onCloseModal }) => {
 export default ActionModal;
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: 'white'
-    },
-    content: {
-        padding: 20,
-    },
-    content__subheading: {
-        marginBottom: 10,
-
-        fontSize: 16,
-        fontWeight: '600',
-        color: '#ccc',
-    },
     content__button: {
         paddingVertical: 15,
 

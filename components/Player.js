@@ -1,28 +1,31 @@
 import React, { useRef } from 'react';
 import {
     View,
-    Image,
     Text,
     Dimensions,
     TouchableOpacity
 } from 'react-native';
 import Slider from '@react-native-community/slider';
-import {iOSUIKit} from 'react-native-typography';
+import { iOSUIKit } from 'react-native-typography';
 import Icon from 'react-native-vector-icons/Fontisto';
-import ModalizeWrapper from 're-player-music/components/ModalizeWrapper';
-import ActionModal from 're-player-music/components/ActionModal';
+
+import ModalizeWrapper from '../components/ModalizeWrapper';
+import ActionModal from '../components/ActionModal';
+import Image from '../components/Image';
+
+import ViewPager from '@react-native-community/viewpager';
 
 const { width } = Dimensions.get('window');
 
-const Player = ({ onOpenModal }) => {
+const Player = ({ onOpenModal, current }) => {
     return (
-        <>
+        <View style={{ paddingHorizontal: 20 }}>
             <View>
                 <View style={{ alignItems: 'center' }}>
                     <Image
-                        style={{ width: 300, height: 300, borderRadius: 2 }}
-                        resizeMode="contain"
-                        source={{ uri: 'https://static.mp3xa.cc/album_images/400x400/nurminskijj-pacany-s-ulic-vybivajutsja-v-ljudi.jpg' }}
+                        width={300}
+                        height={300}
+                        source={current.image}
                     />
 
                     <Slider
@@ -47,10 +50,10 @@ const Player = ({ onOpenModal }) => {
             <View style={{ alignItems: 'center' }}>
                 <View style={{ alignItems: 'center', paddingBottom: 65, paddingTop: 65 }}>
                     <Text style={[ iOSUIKit.title3Emphasized, { color: '#fff' } ]}>
-                        Друг
+                        { current.title }
                     </Text>
                     <Text style={[ iOSUIKit.caption1, { color: '#46b3e6', paddingTop: 10 } ]}>
-                        Нурминский
+                        { current.author }
                     </Text>
                 </View>
 
@@ -71,14 +74,12 @@ const Player = ({ onOpenModal }) => {
                         </TouchableOpacity>
                     </View>
 
-                    <TouchableOpacity onPress={() => {
-                        onOpenModal();
-                    }} style={{ paddingLeft: 50, paddingRight: 10 }}>
+                    <TouchableOpacity onPress={() => onOpenModal()} style={{ paddingLeft: 50, paddingRight: 10 }}>
                         <Icon name={'more-v-a'} size={15} color={'#fff'} />
                     </TouchableOpacity>
                 </View>
             </View>
-        </>
+        </View>
     )
 };
 
