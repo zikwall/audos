@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import PlaylistItemMore from 're-player-music/components/PlaylistItemMore';
 import Icon from 'react-native-vector-icons/Fontisto';
-import {iOSUIKit} from 'react-native-typography';
+import { iOSUIKit } from 'react-native-typography';
 
 const ActionItem = ({ onPress, title, icon }) => (
     <TouchableOpacity onPress={onPress} style={{ flexDirection: 'row', paddingVertical: 15 }}>

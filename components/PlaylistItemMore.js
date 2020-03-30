@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Fontisto';
 import { iOSUIKit } from 'react-native-typography';
 
-import Image from '../components/Image';
+import UIImage from '../components/ui/UIImage';
 import { width } from '../components/Const';
 
 const PlaylistItemMore = ({ theme, image, title, author, onTouchAngle }) => {

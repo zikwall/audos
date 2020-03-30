@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, ScrollView } from 'react-native';
 import { iOSUIKit } from 'react-native-typography';
 
-import PlaylistItem from '../components/PlaylistItem';
+import UISongItem from '../components/ui/UISongItem';
 
 const CurrentPlaylist = ({ theme, onOpenModal, onSelectItem, items }) => {
 
@@ -30,7 +30,7 @@ const CurrentPlaylist = ({ theme, onOpenModal, onSelectItem, items }) => {
             <ScrollView showsVerticalScrollIndicator={false} >
                 <View style={{ paddingHorizontal: 20 }}>
                     {items.map((item, key) => (
-                        <PlaylistItem
+                        <UISongItem
                             key={key}
                             onTouchMore={onTouchItemMore}
                             onToucItem={onTouchItem}

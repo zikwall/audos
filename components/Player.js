@@ -11,7 +11,7 @@ import Icon from 'react-native-vector-icons/Fontisto';
 
 import ModalizeWrapper from '../components/ModalizeWrapper';
 import ActionModal from '../components/ActionModal';
-import Image from '../components/Image';
+import UIImage from '../components/ui/UIImage';
 
 import ViewPager from '@react-native-community/viewpager';
 
@@ -22,7 +22,7 @@ const Player = ({ onOpenModal, current }) => {
         <View style={{ paddingHorizontal: 20 }}>
             <View>
                 <View style={{ alignItems: 'center' }}>
-                    <Image
+                    <UIImage
                         width={300}
                         height={300}
                         source={current.image}

@@ -3,10 +3,10 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Fontisto';
 import { iOSUIKit } from 'react-native-typography';
 
-import Image from '../components/Image';
-import { width } from '../components/Const';
+import UIImage from './UIImage';
+import { width } from 're-player-music/components/Const';
 
-const PlaylistItem = ({ theme, id, image, timeVisible, title, author, onTouchMore, onToucItem }) => {
+const UISongItem = ({ theme, id, image, timeVisible, title, author, onTouchMore, onToucItem }) => {
 
     return (
         <TouchableOpacity
@@ -14,7 +14,7 @@ const PlaylistItem = ({ theme, id, image, timeVisible, title, author, onTouchMor
             style={{ flexDirection: 'row', justifyContent: 'space-between', paddingVertical: 7 }}
         >
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <Image width={45} height={45} round={5} source={image} />
+                <UIImage width={45} height={45} round={5} source={image} />
 
                 <View style={{ paddingHorizontal: 15, width: width * 0.55}}>
                     <Text numberOfLines={1} style={[ iOSUIKit.callout, { color: '#fff', flexWrap: 'wrap' } ]}>
