@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="500" height="250" src="https://github.com/zikwall/audos/blob/master/screenshots/audos.png">
+  <img width="400" height="200" src="https://github.com/zikwall/audos/blob/master/screenshots/audos.png">
   <h5>Awesome music player & UI/UX for react native applications</h5>
 </div>
 
