@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Fontisto';
-import {human} from 'react-native-typography';
+import { iOSUIKit } from 'react-native-typography';
 
 const UIMiniplayer = ({ onPlayPause }) => {
     return (
@@ -20,10 +20,10 @@ const UIMiniplayer = ({ onPlayPause }) => {
                     <Icon name={'play'} size={15} color={'#46b3e6'} />
                 </TouchableOpacity>
                 <View style={{ alignItems: 'center' }}>
-                    <Text style={[ human.footnote, { color: '#fff' } ]}>
+                    <Text style={[ iOSUIKit.footnote, { color: '#fff' } ]}>
                         Друг
                     </Text>
-                    <Text style={[ human.caption2, { color: '#ccc' } ]}>
+                    <Text style={[ iOSUIKit.caption2, { color: '#ccc' } ]}>
                         Нурминский
                     </Text>
                 </View>

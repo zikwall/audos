@@ -9,16 +9,18 @@ import {
 import Icon from 'react-native-vector-icons/Ionicons';
 import IconFontisto from 'react-native-vector-icons/Fontisto';
 
-import { width, ColorScheme } from './Const';
-import Player from './Player';
-import ActionModal from '../components/ActionModal';
-import ModalizeWrapper from '../components/ModalizeWrapper';
-import Swiper from '../components/Swiper';
-import CurrentPlaylist from '../components/CurrentPlaylist';
-import UIMiniplayer from '../components/ui/UIMiniplayer';
+import { Scheme } from 'audos/components/consts/Color';
+import { Width } from 'audos/components/consts/Size';
+
+import UIPlayer from 'audos/components/ui/UIPlayer';
+import AudosActionModal from 'audos/components/AudosActionModal';
+import UISwiper from 'audos/components/ui/UISwiper';
+import AudosCurrentPlaylist from 'audos/components/AudosCurrentPlaylist';
+import UIMiniplayer from 'audos/components/ui/UIMiniplayer';
+import UIModalizeWrapper from 'audos/components/ui/UIModalizeWrapper';
 
 const AudosPlayer = ({ colorScheme, actionItems, actionItemIcons, items, minimize }) => {
-    StatusBar.setBackgroundColor(ColorScheme[colorScheme].backgroundColor);
+    StatusBar.setBackgroundColor(Scheme[colorScheme].backgroundColor);
 
     const [ currentSong, setCurrentSong ] = useState(null);
     const [ currentPage, setCurrentPage ] = useState(0);
@@ -63,7 +65,7 @@ const AudosPlayer = ({ colorScheme, actionItems, actionItemIcons, items, minimiz
         if (!!currentSong) {
             return (
                 <View>
-                    <Player
+                    <UIPlayer
                         onOpenModal={snapBottomSheet}
                         current={currentSong}
                     />
@@ -86,17 +88,17 @@ const AudosPlayer = ({ colorScheme, actionItems, actionItemIcons, items, minimiz
         <>
             <View style={{
                 flex: 1,
-                backgroundColor: ColorScheme[colorScheme].backgroundColor,
+                backgroundColor: Scheme[colorScheme].backgroundColor,
                 paddingBottom: 20,
                 justifyContent: 'space-between'
             }}>
                 <View style={{ alignItems: 'center' }}>
-                    <TouchableOpacity onPress={() => {}} style={{ width: width, alignItems: 'center', paddingBottom: 10, paddingTop: 10 }}>
-                        <Icon name={'md-arrow-down'} size={15} color={ColorScheme[colorScheme].primaryColor} />
+                    <TouchableOpacity onPress={() => {}} style={{ width: Width, alignItems: 'center', paddingBottom: 10, paddingTop: 10 }}>
+                        <Icon name={'md-arrow-down'} size={15} color={Scheme[colorScheme].primaryColor} />
                     </TouchableOpacity>
                 </View>
 
-                <Swiper
+                <UISwiper
                     ref={ref => swiperRef.current = ref}
                     showsPagination={false}
                     loop={true}
@@ -105,14 +107,14 @@ const AudosPlayer = ({ colorScheme, actionItems, actionItemIcons, items, minimiz
                 >
                     {renderPlayer()}
                     <View>
-                        <CurrentPlaylist
-                            theme={ColorScheme[colorScheme]}
+                        <AudosCurrentPlaylist
+                            theme={Scheme[colorScheme]}
                             onOpenModal={snapBottomSheet}
                             onSelectItem={onSelectSong}
                             items={items}
                         />
                     </View>
-                </Swiper>
+                </UISwiper>
 
                 <View style={{
                     flexDirection: 'row',
@@ -121,32 +123,32 @@ const AudosPlayer = ({ colorScheme, actionItems, actionItemIcons, items, minimiz
                     paddingHorizontal: 20,
                     paddingTop: 10
                 }}>
-                    <Icon name={'ios-shuffle'} size={20} color={ColorScheme[colorScheme].primaryColor} />
+                    <Icon name={'ios-shuffle'} size={20} color={Scheme[colorScheme].primaryColor} />
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                         <View style={{ paddingRight: 10 }}>
-                            <Icon name={'ios-play'} size={currentPage == 0 ? 20 : 10} color={ColorScheme[colorScheme].primaryColor} />
+                            <Icon name={'ios-play'} size={currentPage == 0 ? 20 : 10} color={Scheme[colorScheme].primaryColor} />
                         </View>
                         <View stle={{ paddingLeft: 10 }}>
-                            <Icon name={'ios-list'} size={currentPage == 1 ? 20 : 10} color={ColorScheme[colorScheme].primaryColor} />
+                            <Icon name={'ios-list'} size={currentPage == 1 ? 20 : 10} color={Scheme[colorScheme].primaryColor} />
                         </View>
                     </View>
-                    <Icon name={'ios-refresh'} size={20} color={ColorScheme[colorScheme].primaryColor} />
+                    <Icon name={'ios-refresh'} size={20} color={Scheme[colorScheme].primaryColor} />
                 </View>
             </View>
 
-            <ModalizeWrapper
+            <UIModalizeWrapper
                 referal={bottomSheet}
                 adjustToContentHeight
                 modalStyle={{ backgroundColor: '#222831' }}
                 handleStyle={{ backgroundColor: '#5f6769' }}
             >
-                <ActionModal
+                <AudosActionModal
                     onCloseModal={() => closeBottomSheet()}
                     items={actionItems}
                     itemsIcons={actionItemIcons}
                     current={currentSnapedSong}
                 />
-            </ModalizeWrapper>
+            </UIModalizeWrapper>
         </>
     )
 };

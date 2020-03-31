@@ -5,15 +5,15 @@ import UIActionableHorizontalScroll from './UIActionableHorizontalScroll';
 import UIBanner from './UIBanner';
 import UIMultilineHorizontalScroll from './UIMultilineHorizontalScroll';
 
-import { ColorScheme } from '../Const';
+import { Scheme } from 'audos/components/consts/Color';
 
 const UIPlaylisScene = ({ colorScheme, items }) => {
-    StatusBar.setBackgroundColor(ColorScheme[colorScheme].backgroundColor);
+    StatusBar.setBackgroundColor(Scheme[colorScheme].backgroundColor);
 
     return (
         <View style={{
             flex: 1,
-            backgroundColor: ColorScheme[colorScheme].backgroundColor,
+            backgroundColor: Scheme[colorScheme].backgroundColor,
         }}>
             <UIBanner
                 title={'Специально для вас'}

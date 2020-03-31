@@ -1,25 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import PlaylistItemMore from 'audos/components/PlaylistItemMore';
 import Icon from 'react-native-vector-icons/Fontisto';
 import { iOSUIKit } from 'react-native-typography';
+import UIPlaylistItemMore from 'audos/components/ui/UIPlaylistItemMore';
+import UIActionMenuItem from 'audos/components/ui/UIActionMenuItem';
 
-const ActionItem = ({ onPress, title, icon }) => (
-    <TouchableOpacity onPress={onPress} style={{ flexDirection: 'row', paddingVertical: 15 }}>
-        <View style={{ width: 20, alignItems: 'center' }}>
-            <Icon name={icon} size={20} color={'#46b3e6'}/>
-        </View>
-        <Text style={[ iOSUIKit.callout, { color: '#fff', paddingLeft: 20 } ]}>
-            { title }
-        </Text>
-    </TouchableOpacity>
-);
-
-ActionItem.defaultProps = {
-    onPress: () => {}
-};
-
-const ActionModal = ({ onCloseModal, items, itemsIcons, current }) => {
+const AudosActionModal = ({ onCloseModal, items, itemsIcons, current }) => {
     return (
         <View style={{ flex: 1, paddingTop: 10, }}>
             <View style={{
@@ -27,7 +13,7 @@ const ActionModal = ({ onCloseModal, items, itemsIcons, current }) => {
                 paddingHorizontal: 10,
                 paddingBottom: 10
             }}>
-                <PlaylistItemMore
+                <UIPlaylistItemMore
                     title={current.title}
                     author={current.author}
                     image={current.image}
@@ -52,7 +38,7 @@ const ActionModal = ({ onCloseModal, items, itemsIcons, current }) => {
             <View style={{ backgroundColor: '#3c4245', paddingVertical: 10, paddingHorizontal: 20 }}>
                 {
                     items.map((item, key) => (
-                        <ActionItem key={key} title={item.title} icon={item.icon} onPress={item.onPress}/>
+                        <UIActionMenuItem key={key} title={item.title} icon={item.icon} onPress={item.onPress}/>
                     ))
                 }
             </View>
@@ -60,7 +46,7 @@ const ActionModal = ({ onCloseModal, items, itemsIcons, current }) => {
     )
 };
 
-export default ActionModal;
+export default AudosActionModal;
 
 const styles = StyleSheet.create({
     content__button: {

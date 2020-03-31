@@ -3,17 +3,17 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Fontisto';
 import { iOSUIKit } from 'react-native-typography';
 
-import UIImage from '../components/ui/UIImage';
-import { width } from '../components/Const';
+import UIImage from 'audos/components/ui/UIImage';
+import { Width } from 'audos/components/consts/Size';
 
-const PlaylistItemMore = ({ theme, image, title, author, onTouchAngle }) => {
+const UIPlaylistItemMore = ({ theme, image, title, author, onTouchAngle }) => {
 
     return (
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingVertical: 7 }}>
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                 <UIImage width={45} height={45} round={5} source={image} />
 
-                <View style={{ paddingHorizontal: 15, width: width * 0.55}}>
+                <View style={{ paddingHorizontal: 15, width: Width * 0.55}}>
                     <Text numberOfLines={1} style={[ iOSUIKit.callout, { color: '#fff', flexWrap: 'wrap' } ]}>
                         { title }
                     </Text>
@@ -32,8 +32,8 @@ const PlaylistItemMore = ({ theme, image, title, author, onTouchAngle }) => {
     )
 };
 
-PlaylistItemMore.defaultProps = {
+UIPlaylistItemMore.defaultProps = {
     onTouchAngle: () => {}
 }
 
-export default PlaylistItemMore;
+export default UIPlaylistItemMore;

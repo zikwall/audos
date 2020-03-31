@@ -1,8 +1,4 @@
-import { Dimensions } from 'react-native';
-
-const { width, height } = Dimensions.get('window');
-
-const ColorScheme = {
+const Scheme = {
     Dark: {
         backgroundColor: '#121212',
         primaryColor: '#fff',
@@ -16,5 +12,5 @@ const ColorScheme = {
 };
 
 export {
-    width, height, ColorScheme
+    Scheme
 }

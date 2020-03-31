@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/Fontisto';
 import { iOSUIKit } from 'react-native-typography';
 
 import UIImage from './UIImage';
-import { width } from 'audos/components/Const';
+import { Width } from 'audos/components/consts/Size';
 
 const UISongItem = ({ theme, id, image, timeVisible, title, author, onTouchMore, onToucItem }) => {
 
@@ -16,7 +16,7 @@ const UISongItem = ({ theme, id, image, timeVisible, title, author, onTouchMore,
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                 <UIImage width={45} height={45} round={5} source={image} />
 
-                <View style={{ paddingHorizontal: 15, width: width * 0.55}}>
+                <View style={{ paddingHorizontal: 15, width: Width * 0.55}}>
                     <Text numberOfLines={1} style={[ iOSUIKit.callout, { color: '#fff', flexWrap: 'wrap' } ]}>
                         { title }
                     </Text>

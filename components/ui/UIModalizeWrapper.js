@@ -1,7 +1,7 @@
 import React from 'react';
 import { Modalize } from 'react-native-modalize';
 
-const ModalizeWrapper = (
+const UIModalizeWrapper = (
     { 
         children, 
         referal, 
@@ -29,4 +29,4 @@ const ModalizeWrapper = (
     )
 };
 
-export default ModalizeWrapper;
+export default UIModalizeWrapper;

@@ -1,7 +1,3 @@
-/**
- * react-native-swiper
- * @author leecade<leecade@163.com>
- */
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import {
@@ -17,11 +13,6 @@ import {
 
 import ViewPager from '@react-native-community/viewpager';
 
-
-/**
- * Default styles
- * @type {StyleSheetPropType}
- */
 const styles = {
   container: {
     backgroundColor: 'transparent',

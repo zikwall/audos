@@ -2,9 +2,9 @@ import React from 'react';
 import { View, Text, ScrollView } from 'react-native';
 import { iOSUIKit } from 'react-native-typography';
 
-import UISongItem from '../components/ui/UISongItem';
+import UISongItem from 'audos/components/ui/UISongItem';
 
-const CurrentPlaylist = ({ theme, onOpenModal, onSelectItem, items }) => {
+const AudosCurrentPlaylist = ({ theme, onOpenModal, onSelectItem, items }) => {
 
     const onTouchItemMore = (id, title, author, image) => {
         onOpenModal(id, title, author, image);
@@ -46,4 +46,4 @@ const CurrentPlaylist = ({ theme, onOpenModal, onSelectItem, items }) => {
     )
 };
 
-export default CurrentPlaylist;
+export default AudosCurrentPlaylist;

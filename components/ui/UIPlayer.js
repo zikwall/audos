@@ -8,11 +8,11 @@ import {
 import Slider from '@react-native-community/slider';
 import { iOSUIKit } from 'react-native-typography';
 import Icon from 'react-native-vector-icons/Fontisto';
-import UIImage from '../components/ui/UIImage';
+import UIImage from 'audos/components/ui/UIImage';
 
-const { width } = Dimensions.get('window');
+import { Width } from 'audos/components/consts/Size';
 
-const Player = ({ onOpenModal, current }) => {
+const UIPlayer = ({ onOpenModal, current }) => {
     return (
         <View style={{ paddingHorizontal: 20 }}>
             <View>
@@ -24,7 +24,7 @@ const Player = ({ onOpenModal, current }) => {
                     />
 
                     <Slider
-                        style={{width: width - 30, height: 30}}
+                        style={{width: Width - 30, height: 30}}
                         minimumValue={0}
                         maximumValue={1}
                         minimumTrackTintColor="#46b3e6"
@@ -81,4 +81,4 @@ const Player = ({ onOpenModal, current }) => {
     )
 };
 
-export default Player;
+export default UIPlayer;
