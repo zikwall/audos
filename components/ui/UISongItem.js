@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/Fontisto';
 import { iOSUIKit } from 'react-native-typography';
 
 import UIImage from './UIImage';
-import { width } from 're-player-music/components/Const';
+import { width } from 'audos/components/Const';
 
 const UISongItem = ({ theme, id, image, timeVisible, title, author, onTouchMore, onToucItem }) => {
 

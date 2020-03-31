@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import PlaylistItemMore from 're-player-music/components/PlaylistItemMore';
+import PlaylistItemMore from 'audos/components/PlaylistItemMore';
 import Icon from 'react-native-vector-icons/Fontisto';
 import { iOSUIKit } from 'react-native-typography';
 

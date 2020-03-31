@@ -1,6 +1,6 @@
 import React from 'react';
-import RePlayerMusic from 're-player-music';
-import UIPlaylisScene from 're-player-music/components/ui/UIPlaylistScene';
+import AudosPlayer from 'audos';
+import UIPlaylisScene from 'audos/components/ui/UIPlaylistScene';
 
 import { playlist, actionItems } from './Data';
 
@@ -11,7 +11,7 @@ const App = () => {
     />*/
 
     return (
-        <RePlayerMusic
+        <AudosPlayer
             colorScheme={'Dark'}
             actionItems={actionItems}
             items={playlist}

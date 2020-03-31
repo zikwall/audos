@@ -17,7 +17,7 @@ import Swiper from '../components/Swiper';
 import CurrentPlaylist from '../components/CurrentPlaylist';
 import UIMiniplayer from '../components/ui/UIMiniplayer';
 
-const RePlayerMusic = ({ colorScheme, actionItems, actionItemIcons, items, minimize }) => {
+const AudosPlayer = ({ colorScheme, actionItems, actionItemIcons, items, minimize }) => {
     StatusBar.setBackgroundColor(ColorScheme[colorScheme].backgroundColor);
 
     const [ currentSong, setCurrentSong ] = useState(null);
@@ -151,12 +151,12 @@ const RePlayerMusic = ({ colorScheme, actionItems, actionItemIcons, items, minim
     )
 };
 
-RePlayerMusic.defaultProps = {
+AudosPlayer.defaultProps = {
     minimize: false,
 };
 
-RePlayerMusic.propTypes = {
+AudosPlayer.propTypes = {
     minimize: PropTypes.bool,
 };
 
-export default RePlayerMusic;
+export default AudosPlayer;

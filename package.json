@@ -1,14 +1,14 @@
 {
-  "name": "re-player-music",
+  "name": "audos",
   "version": "1.0.0",
-  "description": "Music player for React Native Apps based",
+  "description": "Awesome music player & UI/UX for react native applications",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zikwall/re-player-music.git"
+    "url": "git+https://github.com/zikwall/audos.git"
   },
   "author": "Andrey Kapitonov",
   "keywords": [
@@ -21,7 +21,7 @@
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zikwall/re-player-music/issues"
+    "url": "https://github.com/zikwall/audos/issues"
   },
-  "homepage": "https://github.com/zikwall/re-player-music#readme"
+  "homepage": "https://github.com/zikwall/audos#readme"
 }
