@@ -19,7 +19,7 @@ import AudosCurrentPlaylist from 'audos/components/AudosCurrentPlaylist';
 import UIMiniplayer from 'audos/components/ui/UIMiniplayer';
 import UIModalizeWrapper from 'audos/components/ui/UIModalizeWrapper';
 
-const AudosPlayer = ({ colorScheme, actionItems, actionItemIcons, items, minimize }) => {
+const AudosPlayer = ({ colorScheme, actionItems, actionItemIcons, items, minimize, onTopPress }) => {
     StatusBar.setBackgroundColor(Scheme[colorScheme].backgroundColor);
 
     const [ currentSong, setCurrentSong ] = useState(null);
@@ -64,12 +64,10 @@ const AudosPlayer = ({ colorScheme, actionItems, actionItemIcons, items, minimiz
     const renderPlayer = () => {
         if (!!currentSong) {
             return (
-                <View>
-                    <UIPlayer
-                        onOpenModal={snapBottomSheet}
-                        current={currentSong}
-                    />
-                </View>
+                <UIPlayer
+                    onOpenModal={snapBottomSheet}
+                    current={currentSong}
+                />
             );
         }
 
@@ -93,7 +91,7 @@ const AudosPlayer = ({ colorScheme, actionItems, actionItemIcons, items, minimiz
                 justifyContent: 'space-between'
             }}>
                 <View style={{ alignItems: 'center' }}>
-                    <TouchableOpacity onPress={() => {}} style={{ width: Width, alignItems: 'center', paddingBottom: 10, paddingTop: 10 }}>
+                    <TouchableOpacity onPress={onTopPress} style={{ width: Width, alignItems: 'center', paddingBottom: 10, paddingTop: 10 }}>
                         <Icon name={'md-arrow-down'} size={15} color={Scheme[colorScheme].primaryColor} />
                     </TouchableOpacity>
                 </View>

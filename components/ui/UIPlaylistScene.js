@@ -50,6 +50,26 @@ const UIPlaylisScene = ({ colorScheme, items }) => {
                 items={items}
                 countInGroup={3}
             />
+
+            <UIActionableHorizontalScroll
+                label={'Новые альбомы'}
+                actionLabel={'Показать все'}
+                onActionLabelTouch={() => alert('Показал!?')}
+            >
+                {
+                    items.map((item, key) => (
+                        <UIAlbumItem
+                            id={10}
+                            title={item.title}
+                            author={item.author}
+                            year={2020}
+                            image={item.image}
+                            onSelectSong={() => {}}
+                            key={key}
+                        />
+                    ))
+                }
+            </UIActionableHorizontalScroll>
         </View>
 
     )

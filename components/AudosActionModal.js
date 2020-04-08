@@ -35,7 +35,7 @@ const AudosActionModal = ({ onCloseModal, items, itemsIcons, current }) => {
                 }
             </View>
 
-            <View style={{ backgroundColor: '#3c4245', paddingVertical: 10, paddingHorizontal: 20 }}>
+            <View style={{ backgroundColor: '#121212', paddingVertical: 10, paddingHorizontal: 20 }}>
                 {
                     items.map((item, key) => (
                         <UIActionMenuItem key={key} title={item.title} icon={item.icon} onPress={item.onPress}/>

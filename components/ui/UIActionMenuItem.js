@@ -6,7 +6,7 @@ import { iOSUIKit } from 'react-native-typography';
 const UIActionMenuItem = ({ onPress, title, icon }) => (
     <TouchableOpacity onPress={onPress} style={{ flexDirection: 'row', paddingVertical: 15 }}>
         <View style={{ width: 20, alignItems: 'center' }}>
-            <Icon name={icon} size={20} color={'#46b3e6'}/>
+            <Icon name={icon} size={20} color={'#fff'}/>
         </View>
         <Text style={[ iOSUIKit.callout, { color: '#fff', paddingLeft: 20 } ]}>
             { title }
