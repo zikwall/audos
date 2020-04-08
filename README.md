@@ -14,9 +14,33 @@ Player | Playlist | ActonSheet | Empty | UI
 ![Player](gifs/20200330_193102_1.gif "Player responsive layout") | ![Playlist](gifs/20200330_123628_1.gif "Player responsive layout") | ![Playlist](gifs/20200330_193225_1.gif "Player responsive layout") |  ![UI](gifs/20200330_194015_1.gif "Player responsive layout") 
 
 
-### UI components
+### UI & components
 
-todo
+- [x] AudosPlayer
+- [x] AudosActionModal
+- [x] AudosCurrentPlaylist
+
+#### UI
+
+- [x] UIPlayer
+- [X] UIMiniPlayer
+- [x] UICurrentPlaylist
+- [x] UISongItem
+- [x] UIAlbumItem
+- [x] UIActionMenuItem
+- [x] UIPlaylistItemMore
+- [x] UIBanner
+- [x] UIImage
+- [x] UIEmptyImage
+- [x] UIActionableHorizontalScroll
+- [x] UIMultilineHorizontalScroll
+- [x] UIModalizeWrapper
+- [x] UISwiper
+
+#### Expreimental
+
+- [x] UIPlaylistScene
+- [ ] UIParallax
 
 ### Installation
 
@@ -24,7 +48,7 @@ todo
 
 ### Example usage
 
-Full example see `exampels` folder
+Full example with react navigation see `exampels` folder
 
 ### Features
 
